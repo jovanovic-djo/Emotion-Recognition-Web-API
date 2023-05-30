@@ -29,13 +29,10 @@
     </style>
 </head>
 <body>
-    <h1>Emotion Detection Result</h1>
     {% if emotions %}
         <div class="result">
-            <h2>{{ emotions }}</h2>
-            {% if image_filename %}
-            <img src="{{ url_for('static', filename=image_filename) }}" alt="Uploaded Image">
-            {% endif %}
+            <h1>Emotion Detection Result: {{ emotions }}</h1>
+            <img src="{{path}}" alt="Uploaded Image">
         </div>
     {% else %}
         <p>{{ message }}</p>
